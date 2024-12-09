@@ -1,0 +1,32 @@
+/* Загальні стилі */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7f7; /* Світлий фон */
+    margin: 0;
+  }
+  
+  /* Контейнер крапок */
+  .dots-container {
+    display: flex;
+    gap: 10px; /* Відстань між крапками */
+  }
+  
+  /* Стандартна крапка */
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #c4d1c7; /* Світло-зелений */
+    border-radius: 50%; /* Робимо круглим */
+  }
+  
+  /* Виділена крапка */
+  .dot.active {
+    width: 18px;
+    height: 12px; /* Овальна форма */
+    background-color: #32cd32; /* Яскраво-зелений */
+    border-radius: 20px; /* Закруглені краї */
+  }
+  
