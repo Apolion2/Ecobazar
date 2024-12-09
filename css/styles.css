@@ -29,4 +29,22 @@ body {
     background-color: #32cd32; /* Яскраво-зелений */
     border-radius: 20px; /* Закруглені краї */
   }
+  .line-tracker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Відстань між лініями */
+  }
+  
+  .line {
+    width: 40px; /* Ширина кожної лінії */
+    height: 5px; /* Висота кожної лінії */
+    background-color: lightgray; /* Колір звичайних ліній */
+    border-radius: 2px; /* Злегка округлені кінці */
+  }
+  
+  .line.active {
+    background-color: green; /* Виділена центральна лінія */
+    width: 60px; /* Центральна лінія довша */
+  }
   
