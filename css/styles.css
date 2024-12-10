@@ -1,52 +1,143 @@
-/* Загальні стилі */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f5f7f7; /* Світлий фон */
-  font-family: Arial, sans-serif;
+:root{
+  /*Сірі відтінки */
+  --gray1: #f2f2f2; /*Gray.5*/
+  --gray2: #e6e6e6;
+  --gray3: #cccccc;
+  --gray4: #b3b3b3;
+  --gray5: #999999;
+  --gray6: #808080;
+  --gray7: #666666;
+  --gray8: #4c4c4c;
+  --gray9: #333333;
+  --gray10: #191919;
+  /*Зелено сірий відтінки*/
+  --green_gray1: #edf2ee; /*Green Gray.5*/
+  --green_gray2: #dae5da;
+  --green_gray3: #b4ccb4;
+  --green_gray4: #96b297;
+  --green_gray5: #7a997c;
+  --green_gray6: #618062;
+  --green_gray7: #406b42;
+  --green_gray8: #2b572e;
+  --green_gray9: #173b1a;
+  --green_gray10: #002603;
+
+  /*осн. кольора*/
+  --white: #ffffff;
+  --danger: #ae4848;
+  --waringing: #ff8a00;
+  --hard_primary: #2c742f;
+  --primary: #00b207;
+  --soft_primary: #84d187;
+
+    /* Базовий шрифт */
+    --font-family: 'Poppins', sans-serif;
+  
+    /* Вага шрифтів */
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+  
+    /* Розміри для різних типів тексту */
+    --font-size-display-01: 48px; /* Наприклад, Display 01 */
+    --font-size-heading-01: 32px; /* Heading 01 */
+    --font-size-heading-02: 28px;
+    --font-size-heading-03: 24px;
+    --font-size-body-xxl: 20px;
+    --font-size-body-xl: 18px;
+    --font-size-body-large: 16px;
+    --font-size-body-medium: 14px;
+    --font-size-body-small: 12px;
+    --font-size-body-tiny: 10px;
+  
+    /* Висота рядка (line-height) */
+    --line-height-display: 1.2;
+    --line-height-heading: 1.4;
+    --line-height-body: 1.6;
+
+  /*стилізація маленьких іконок*/
+  --icon-small-size: 40px;
+  --icon-small-big-color: 
 }
 
-  
-  /* Контейнер крапок */
-  .dots-container {
-    display: flex;
-    gap: 10px; /* Відстань між крапками */
-  }
-  
-  /* Стандартна крапка */
-  .dot {
-    width: 12px;
-    height: 12px;
-    background-color: #c4d1c7; /* Світло-зелений */
-    border-radius: 50%; /* Робимо круглим */
-  }
-  
-  /* Виділена крапка */
-  .dot.active {
-    width: 18px;
-    height: 12px; /* Овальна форма */
-    background-color: #32cd32; /* Яскраво-зелений */
-    border-radius: 20px; /* Закруглені краї */
-  }
-  .line-tracker {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Відстань між лініями */
-  }
-  
-  .line {
-    width: 40px; /* Ширина кожної лінії */
-    height: 5px; /* Висота кожної лінії */
-    background-color: lightgray; /* Колір звичайних ліній */
-    border-radius: 2px; /* Злегка округлені кінці */
-  }
-  
-  .line.active {
-    background-color: green; /* Виділена центральна лінія */
-    width: 60px; /* Центральна лінія довша */
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto
-  }
+.navigation{
+  background-color: var(--white);
+}
+.smallOne {
+  display: flex;
+  justify-content: space-between; /* Розташовує елементи по краях */
+  align-items: center; /* Вирівнювання по вертикалі */
+  padding: 0.25%; /* Опціонально: внутрішні відступи */
+  background-color: var(--white); /* Для візуального тестування */
+  box-shadow: #E5E5E5;
+}
+.contact{
+  font-family: 'Poppins',sans-serif;
+  color: var(--gray7);
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-body-tiny);
+  line-height: var(--line-height-body);
+}
+.links{
+  font-family: var(--font-family);
+  color: var(--gray7);
+  font-weight: var(--font-weight-400);
+  font-size: var(--font-size-body-tiny);
+  line-height: var(--line-height-body);
+  align-items: center;
+}
+/* Стан для середнього контейнера */
+.middle {
+  display: flex;
+  justify-content: space-between; /* Розміщує елементи зліва, по центру та справа */
+  align-items: center; /* Вирівнює елементи по вертикалі */
+  padding: 10px 20px; /* Відступи для кращого вигляду */
+}
+
+/* Логотип */
+.middle .logo img {
+  max-width: 100%; /* Логотип адаптивний */
+  height: auto;
+  width: 150px; /* Можеш налаштувати під свої потреби */
+}
+
+/* Пошукове поле */
+.middle .search {
+  display: flex;
+  align-items: center; /* Вирівнює інпут і кнопку по вертикалі */
+  gap: 10px; /* Відстань між інпутом і кнопкою */
+}
+
+.middle .search input {
+  width: 300px; /* Можеш налаштувати ширину */
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.middle .search button {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.middle .search button:hover {
+  background-color: #45a049; /* Підсвітка при наведенні */
+}
+
+/* Іконки справа */
+.middle .icon {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Відстань між іконками */
+}
+
+.middle .icon img:hover {
+  opacity: 0.7; /* Ефект при наведенні на іконки */
+}
