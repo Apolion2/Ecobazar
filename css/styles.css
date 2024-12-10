@@ -164,13 +164,115 @@
   opacity: 0.7; /* Ефект при наведенні на іконки */
 }
 
+/* Загальний контейнер */
 .bottom-navigation {
-  width: fixed;
+  display: flex;
+  justify-content: space-between; /* Вирівнювання: меню зліва, телефон справа */
+  align-items: center;
   height: 60px;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-right: 300px;
-  padding-bottom: 16px;
-  padding-left: 300px;
+  padding: 0 20px; /* Горизонтальні відступи */
   background-color: var(--gray9);
+  position: relative;
+}
+
+/* Посилання навігації */
+.bottom-navigation .nav-links {
+  display: flex;
+  gap: 32px; /* Відстань між кнопками */
+}
+
+/* Посилання */
+.bottom-navigation .nav-links .nav-link a {
+  text-decoration: none;
+  color: var(--gray5);
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-500);
+  line-height: 21px;
+  transition: color 0.3s;
+}
+
+/* Ефект наведення */
+.bottom-navigation .nav-links .nav-link a:hover {
+  color: var(--white);
+}
+
+/* Телефон */
+.bottom-navigation .phone {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%; /* Займає всю висоту навігаційної панелі */
+  flex-shrink: 0; /* Запобігає зменшенню розміру блоку телефону */
+  margin-left: auto; /* Відсуває телефон максимально вправо */
+}
+
+.bottom-navigation .phone a {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Відстань між іконкою і текстом */
+  text-decoration: none;
+  color: var(--white); /* Використовує змінну для білого кольору */
+  font-family: 'Poppins', sans-serif; /* Встановлює шрифт Poppins */
+  font-size: 14px; /* Розмір тексту */
+  font-weight: 400; /* Вага тексту згідно стандарту Body Small */
+  line-height: 21px; /* Висота рядка */
+  white-space: nowrap; /* Запобігає переносу тексту телефону */
+}
+
+.bottom-navigation .phone img {
+  height: 28px; /* Розмір іконки збільшено для гармонійного вигляду */
+  width: 28px;
+}
+
+
+
+/* Видалення синьої рамки */
+.bottom-navigation a:focus {
+  outline: none;
+}
+
+/* Бургер-меню */
+.burger-menu {
+  display: none; /* Сховано на декстопі */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: block;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Адаптивний вигляд */
+@media (max-width: 768px) {
+  /* Навігація */
+  .bottom-navigation .nav-links {
+    display: none; /* Сховано меню на мобільних */
+  }
+
+  .burger-menu {
+    display: flex; /* Показано бургер-меню на мобільних */
+  }
+
+  /* Відкрите меню */
+  .bottom-navigation.open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Під навігаційною панеллю */
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    padding: 10px;
+    gap: 10px;
+  }
 }
