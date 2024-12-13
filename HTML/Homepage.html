@@ -18,10 +18,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div class="navigation">
+    <header class="navigation">
         <!-- Верхня панель -->
-        <div class="smallOne">
+        <section class="smallOne">
           <div class="contact">
             <p>
               <img src="/img/Map_Pin.png" alt="Іконка розташування магазину" />
@@ -35,10 +34,10 @@
               <a href="#">Sign In / Sign Up</a>
             </p>
           </div>
-        </div>
+        </section>
 
         <!-- Середня ланка -->
-        <div class="middle">
+        <section class="middle">
           <div class="logo">
             <p>
               <img src="/img/Logo(1).png" alt="Логотип Ecobazar" />
@@ -50,23 +49,19 @@
           </div>
           <div class="icon">
             <a class="wishlist" href="#">
-              <img
-                src="/img/whislist/Property 1=Default.png"
-                alt="View wishlist"
-              />
-            </a>
-            <img src="/img/Devider.png" alt="" />
-            <div class="icon">
-            <a href="">
-              <img src="/img/Cart/Property 1=None.png" alt="View to Cart" />
+              <img src="/img/whislist/Property 1=Default.png" alt="Wishlist" />
             </a>
           </div>
-            <!--Добавити пізніше вивід ціни за товар у  корзині-->
+            <div class="divider"></div>
+            <a class="cart" href="#">
+              <img src="/img/Cart/Property 1=None.png" alt="Cart" />
+              <span class="badge">2</span>
+            </a>
           </div>
-        </div>
+        </section>
 
         <!--Нижня панель бургер меню, номер телефону-->
-        <div class="bottom-navigation">
+        <section class="bottom-navigation">
           <div class="nav-links">
             <div class="nav-link">
               <a href="Homepage.html">Home</a>
@@ -96,6 +91,14 @@
               <span></span>
               <span></span>
             </button>
+            <div class="nav-menu" id="navMenu">
+              <a href="Homepage.html">Home</a>
+              <a href="Shop.html">Shop</a>
+              <a href="Pages.html">Pages</a>
+              <a href="Blog.html">Blog</a>
+              <a href="AboutUs.html">About Us</a>
+              <a href="ContactUs.html">Contact Us</a>
+            </div>
           </div>
           <div class="phone">
             <a href="tel:+380985484202">
@@ -103,55 +106,18 @@
               (098)-548-42-02
             </a>
           </div>
-        </div>
-        </div>
-      </div>
-      <!--Featured з перевагами магазину-->
-      <div class="featured">
-        <div class="deliveryTruckFeature">
-          <img
-            src="/img/Featured/delivery-truck 1.png"
-            alt="delivery-truck picture"
-          />
-          <div>
-            <p>Free Shipping</p>
-            <p>Free shipping on all your order</p>
-          </div>
-        </div>
-        <div class="customerSupportFeture">
-          <img
-            src="/img/Featured/headphones 1.png"
-            alt="customerSupport picture"
-          />
-          <div>
-            <p>Customer Support 24/7</p>
-            <p>Instant access to Support</p>
-          </div>
-        </div>
-        <div class="safePaymentFeature">
-          <img src="/img/Featured/shopping-bag.png" alt="Safe payment" />
-          <div>
-            <p>100% secure Payment</p>
-            <p>We ensure your money is save</p>
-          </div>
-        </div>
-        <div class="moneyBackFeature">
-          <img src="/img/Featured/package.png" alt="Moneyback guarantee" />
-          <div>
-            <p>Money-Back Guarantee</p>
-            <p>30 days Money-Back Guarantee</p>
-          </div>
-        </div>
-      </div>
+          </section>
+</header>
       <!--Hero структура -->
       <div class="hero">
         <div class="info">
           <div class="headingInfo">
             <p>WELCOME TO SHOPERY</p>
-            <h1>Fresh & Healthy Organic Food</h1>
+            <h1>Fresh & Healthy</h1>
+            <h1>Organic Food</h1>
           </div>
           <div class="descritionInfo">
-            <p>Sale up to 30% OFF</p>
+            <h5>Sale up to <span>30% OFF</span></h5>
             <p>Free shipping on all your order. We deliver, you enjoy</p>
           </div>
           <a class="shopNow" href="#">Shop now →</a>
@@ -163,99 +129,140 @@
           <span class="dot"></span>
         </div>
       </div>
-    </header>
-    <div class="container">
-      <!--Featured Product-->
+            <!--Featured з перевагами магазину-->
+      <div class="featured">
+        <div class="feature">
+          <img
+            src="/img/Featured/delivery-truck 1.png"
+            alt="delivery-truck picture"
+          />
+          <div>
+            <h3>Free Shipping</h3>
+            <p>Free shipping on all your order</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img
+            src="/img/Featured/headphones 1.png"
+            alt="customerSupport picture"
+          />
+          <div>
+            <h3>Customer Support 24/7</h3>
+            <p>Instant access to Support</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img src="/img/Featured/shopping-bag.png" alt="Safe payment" />
+          <div>
+            <h3>100% secure Payment</h3>
+            <p>We ensure your money is save</p>
+          </div>
+        </div>
+        <div class="feature">
+          <img src="/img/Featured/package.png" alt="Moneyback guarantee" />
+          <div>
+            <h3>Money-Back Guarantee</h3>
+            <p>30 days Money-Back Guarantee</p>
+          </div>
+        </div>
+      </div>
+
+
       <div class="featuredProduct">
+        <div class="heading">
         <h2>Featured Products</h2>
         <div class="line-tracker">
           <span class="line"></span>
           <span class="line active"></span>
           <span class="line"></span>
         </div>
+        </div>
         <!--Products-->
-        <div class="Products">
-          <img src="/img/Fruts/apple.png" alt="Apple picture" />
-          <h3>Green Apple</h3>
-          <p>$14.99</p>
-          <img src="/img/Rating.png" alt="Rating 4/5" />
-          <button
-            class="add-to-cart"
-            data-id="1"
-            data-name="Green Apple"
-            data-price="14.99"
-          >
-            <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
-          </button>
-        </div>
+<!-- Products Section -->
+<div class="products">
+  <div class="Product">
+    <img src="/img/Fruts/apple.png" alt="Apple picture" />
+    <h3>Green Apple</h3>
+    <p>$14.99</p>
+    <img src="/img/Rating.png" alt="Rating 4/5" />
+    <button
+      class="add-to-cart"
+      data-id="1"
+      data-name="Green Apple"
+      data-price="14.99"
+    >
+      <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
+    </button>
+  </div>
 
-        <div class="Products"></div>
-        <img src="/img/Fruts/Cabbage.png" alt="Chanise Cabbage" />
-        <h3>Chanise Cabbage</h3>
-        <p>$8.99</p>
-        <img src="/img/Rating.png" alt="Rating 4/5" />
-        <button
-          class="add-to-cart"
-          data-id="2"
-          data-name="Chanise Cabbage"
-          data-price="8.99"
-        >
-          <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
-        </button>
+  <div class="Product">
+    <img src="/img/Fruts/Cabbage.png" alt="Chanise Cabbage" />
+    <h3>Chanise Cabbage</h3>
+    <p>$8.99</p>
+    <img src="/img/Rating.png" alt="Rating 4/5" />
+    <button
+      class="add-to-cart"
+      data-id="2"
+      data-name="Chanise Cabbage"
+      data-price="8.99"
+    >
+      <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
+    </button>
+  </div>
 
-        <div class="Products"></div>
-        <img
-          src="/img/Fruts/Green Chili Peppers - 640x477.png"
-          alt="Green Chili"
-        />
-        <h3>Green Chili</h3>
-        <p>$19.99</p>
-        <img src="/img/Rating.png" alt="Rating 4/5" />
-        <button
-          class="add-to-cart"
-          data-id="3"
-          data-name="Green Chili"
-          data-price="19.99"
-        >
-          <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
-        </button>
+  <div class="Product">
+    <img src="/img/Fruts/Green Peppers.png" alt="Green Chili" />
+    <h3>Green Chili</h3>
+    <p>$19.99</p>
+    <img src="/img/Rating.png" alt="Rating 4/5" />
+    <button
+      class="add-to-cart"
+      data-id="3"
+      data-name="Green Chili"
+      data-price="19.99"
+    >
+      <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
+    </button>
+  </div>
 
-        <div class="Products">
-          <img src="/img/Fruts/Lettuce.png" alt="Green Lettuce" />
-          <h3>Green Lettuce</h3>
-          <p>$4.99</p>
-          <img src="/img/Rating.png" alt="Rating 4/5" />
-          <button
-            class="add-to-cart"
-            data-id="4"
-            data-name="Green Lettuce"
-            data-price="4.99"
-          >
-            <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
-          </button>
-        </div>
+  <div class="Product">
+    <img src="/img/Fruts/Lettuce.png" alt="Green Lettuce" />
+    <h3>Green Lettuce</h3>
+    <p>$4.99</p>
+    <img src="/img/Rating.png" alt="Rating 4/5" />
+    <button
+      class="add-to-cart"
+      data-id="4"
+      data-name="Green Lettuce"
+      data-price="4.99"
+    >
+      <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
+    </button>
+  </div>
 
-        <div class="Products">
-          <img src="/img/Fruts/Corn.png" alt="Corn" />
-          <h3>Corn</h3>
-          <p>$6.99</p>
-          <img src="/img/Rating.png" alt="Rating 4/5" />
-          <button
-            class="add-to-cart"
-            data-id="5"
-            data-name="Corn"
-            data-price="6.99"
-          >
-            <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
-          </button>
-        </div>
+  <div class="Product">
+    <img src="/img/Fruts/Corn.png" alt="Corn" />
+    <h3>Corn</h3>
+    <p>$6.99</p>
+    <img src="/img/Rating.png" alt="Rating 4/5" />
+    <button
+      class="add-to-cart"
+      data-id="5"
+      data-name="Corn"
+      data-price="6.99"
+    >
+      <img src="/img/Cart/Property 1=None.png" alt="icon-none-cart" />
+    </button>
+  </div>
+</div>
+
 
         <!--All Products
         Тут будуть усі  гарячі знижки найкращі по продажу  топові по рейтингу
         -->
         <div class="allProducts">
           <div class="hotDeals"></div>
-          <h4>Hot Deals</h4>
+          <p>Hot Deals</p>
           <div class="hotDeal">
             <img src="/img/Fruts/apple.png" alt="green apple">
             <div class="productInfo">
@@ -263,19 +270,59 @@
               <p>$14.99</p>
             </div>
           </div>
-          <div class="hotDeal"></div>
-          <div class="hotDeal"></div>
+          <div class="hotDeal">
+          <img src="/img/Fruts/indian malta.png" alt="indian malta">
+            <h3>Indian Malta</h3>
+            <p>$14.99</p>
+          </div>
+          <div class="hotDeal">
+            <img src="/img/Fruts/Lettuce.png" alt="Green Lettuce">
+            <h3>Green Lettuce</h3>
+            <p>$14.99</p>
+          </div>
+
+          <div class="bestSellers"></div>
+          <p>Best Seller</p>
+          <div class="bestSeller">
+            <img src="/img/Fruts/red tomatos.png" alt="Red tomatos">
+            <h3>Red Tomatos</h3>
+            <p>$14.99</p>
+          </div>
           <div class="bestSeller"></div>
-          <div class="topRated"></div>
+          <img src="/img/Fruts/eggplant.png" alt="Eggplant">
+          <h3>Eggplant</h3>
+          <p>$14.99</p>
+          <div class="bestSeller"></div>
+          <img src="/img/Fruts/Capsicum.png" alt="Green Capsicum">
+          <h3>Green Capsicum</h3>
+          <p>$14.99</p>
+          <div class="topRateds"></div>
+          <p>Top Rated</p>
+          <div class="topRated">
+            <img src="/img/Fruts/potatos.png" alt="big potatos">
+            <h3>Big Potatos</h3>
+            <p>$14.99</p>
+          </div>
+          <div class="topRated">
+            <img src="/img/Fruts/Corn.png" alt="Corn">
+            <h3>Corn</h3>
+            <p>$14.99</p>
+          </div>
+          <div class="topRated">
+            <img src="/img/Fruts/fresh cauliflower.png" alt="fresh cauliflower">
+            <h3>Fresh Cauliflower</h3>
+            <p>$14.99</p>
+          </div>
           <div class="bannar">
-            <img src="/img/Bannar/Bannar1.png" alt="" />
+            <img src="/img/Bannar/Bannar1.png" alt=""/>
             <p>SUMMER SALE</p>
             <h1>75% off</h1>
-            <button>Shop Now →</button>
+            <button class="shopNow">Shop Now →</button>
           </div>
         </div>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="/JS/homepage.js"></script>
   </body>
 </html>

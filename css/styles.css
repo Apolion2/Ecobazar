@@ -1,6 +1,7 @@
+/* Базові стилі для мобільних пристроїв */
 :root {
-  /*Сірі відтінки */
-  --gray1: #f2f2f2; /*Gray.5*/
+  /* Сірі відтінки */
+  --gray1: #f2f2f2;
   --gray2: #e6e6e6;
   --gray3: #cccccc;
   --gray4: #b3b3b3;
@@ -10,8 +11,9 @@
   --gray8: #4c4c4c;
   --gray9: #333333;
   --gray10: #191919;
-  /*Зелено сірий відтінки*/
-  --green_gray1: #edf2ee; /*Green Gray.5*/
+  
+  /* Зелено-сірі відтінки */
+  --green_gray1: #edf2ee;
   --green_gray2: #dae5da;
   --green_gray3: #b4ccb4;
   --green_gray4: #96b297;
@@ -22,7 +24,7 @@
   --green_gray9: #173b1a;
   --green_gray10: #002603;
 
-  /*осн. кольора*/
+  /* Основні кольори */
   --white: #ffffff;
   --danger: #ae4848;
   --waringing: #ff8a00;
@@ -30,249 +32,599 @@
   --primary: #00b207;
   --soft_primary: #84d187;
 
-  /* Базовий шрифт */
-  --font-family: "Poppins", sans-serif;
-
-  /* Вага шрифтів */
+  /* Шрифти */
+  --font-family: "Poppins";
   --font-weight-300: 300;
   --font-weight-400: 400;
   --font-weight-500: 500;
   --font-weight-600: 600;
   --font-weight-700: 700;
 
-  /* Розміри для різних типів тексту */
-  --font-size-display-01: 48px; /* Наприклад, Display 01 */
-  --font-size-heading-01: 32px; /* Heading 01 */
-  --font-size-heading-02: 28px;
-  --font-size-heading-03: 24px;
-  --font-size-body-xxl: 20px;
-  --font-size-body-xl: 18px;
-  --font-size-body-large: 16px;
-  --font-size-body-medium: 14px;
-  --font-size-body-small: 12px;
-  --font-size-body-tiny: 10px;
+  /* Розміри шрифтів */
+  --font-size-display-01: 72px;
+  --font-size-heading-01: 56px;
+  --font-size-heading-02: 48px;
+  --font-size-heading-03: 40px;
+  --font-size-heading-04: 36px;
+  --font-size-heading-05: 32px;
+  --font-size-body-XXL: 24px;
+  --font-size-body-XL: 20px;
+  --font-size-body-large: 18px;
+  --font-size-body-medium: 16px;
+  --font-size-body-small: 14px;
+  --font-size-body-tiny: 12px;
 
-  /* Висота рядка (line-height) */
-  --line-height-display: 1.2;
-  --line-height-heading: 1.4;
-  --line-height-body: 1.6;
-
-  /*стилізація маленьких іконок*/
-  --icon-small-size: 40px;
-  --icon-small-big-color: ;
+  /* Line-height */
+  --line-height-display: 86.4px;
+  --line-height-heading01: 67.2px;
+  --line-heught-heading02: 57.6px;
+  --line-heught-heading03: 48px;
+  --line-heught-heading04: 43.2px;
+  --line-heught-heading05: 38.4px;
+  --line-height-bodyXXL: 36px;
+  --line-height-bodyXL: 30px;
+  --line-height-body-large: 27px;
+  --line-height-body-medium: 24px;
+  --line-height-body-small: 21px;
+  --line-height-body-tiny: 15.6px;
 }
 
+header{
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-body);
+  background-color: var(--gray1);
+  color: var(--gray9);
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-body);
+  background-color: var(--white);
+  color: var(--gray9);
+}
+/*Весь хедер*/
 .navigation {
   background-color: var(--white);
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/*Навища ділянка*/
 .smallOne {
   display: flex;
-  justify-content: space-between; /* Розташовує елементи по краях */
-  align-items: center; /* Вирівнювання по вертикалі */
-  padding: 1%; /* Опціонально: внутрішні відступи */
-  background-color: var(--white); /* Для візуального тестування */
-  box-shadow: #e5e5e5;
-}
-.contact {
-  font-family: "Poppins", sans-serif;
-  color: var(--gray7);
-  font-weight: var(--font-weight-400);
-  font-size: var(--font-size-body-tiny);
-  line-height: var(--line-height-body);
-}
-.links {
-  font-family: var(--font-family);
-  color: var(--gray7);
-  font-weight: var(--font-weight-400);
-  font-size: var(--font-size-body-tiny);
-  line-height: var(--line-height-body);
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* Стан для середнього контейнера */
+
+.contact{
+  font-family: var(--font-family);
+  font-size: var(--font-size-body-tiny);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-body-tiny);
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.contact img{
+  width: 15px;
+  height: 15px;
+  border: 1px;
+
+}
+
+.links {
+  font-size: var(--font-size-body-tiny);
+  color: var(--gray7);
+  font-size: var(--font-size-body-tiny);
+  font-weight: var(--font-weight-400);
+  margin-right: 20px;
+  margin-top: 5px;
+
+}
+.links a  {
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body-tiny);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-body-tiny);
+  color: var(--gray7);
+}
+
+/*середня ланка*/
 .middle {
   display: flex;
-  justify-content: space-between; /* Розміщує елементи зліва, по центру та справа */
-  align-items: center; /* Вирівнює елементи по вертикалі */
-  padding: 10px 20px; /* Відступи для кращого вигляду */
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
 }
 
-/* Логотип */
 .middle .logo img {
-  max-width: 100%; /* Логотип адаптивний */
+  width: auto;
   height: auto;
-  width: 150px; /* Можеш налаштувати під свої потреби */
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-/* Пошукове поле */
 .middle .search {
   display: flex;
-  align-items: center; /* Вирівнює інпут і кнопку по вертикалі */
-  gap: 0; /* Відсутність відстані між інпутом та кнопкою */
-  width: 300px; /* Можеш налаштувати ширину */
+  width: 100%;
+  margin-top: 10px;
 }
 
 .middle .search input {
-  width: 400px; /* Інпут займає всю ширину блоку */
-  height:45px;
-  padding-top: 12px;
-  padding-right: 18px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  gap: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px; /* Закруглені краї зліва */
+  flex: 1;
+  padding: 10px;
+  font-size: var(--font-size-body-medium);
+  border: 1px solid var(--gray3);
+  border-top-left-radius: 6px;
+  border-bottom-left-radius:6px ;
 }
 
 .middle .search button {
   background-color: var(--primary);
   color: var(--white);
   border: none;
-  font-weight: var(--font-weight-600);
-  font-family: var(--font-family);
-  font-size: var(--font-size-body-small);
-  line-height: var(--line-height-body);
-  padding-top: 14px;
-  padding-right: 24px;
-  padding-bottom: 14px;
   padding-left: 24px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 24px;
   gap: 12px;
+  font-size: var(--font-size-body-small);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-600);
+  line-height: 16.8px;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
   cursor: pointer;
-}
-.middle .logo img{
-  width: 183px;
-  height: 38px;
-  margin-top: 27.5px;
-  left: 300px;
-  gap: 8px;
+
 }
 
 .middle .search button:hover {
-  background-color: var(--hard_primary); /* Підсвітка при наведенні */
+  background-color: var(--hard_primary);
 }
 
-/* Іконки справа */
 .middle .icon {
+  display: flex; /* Горизонтальне вирівнювання */
+  align-items: center; /* Центрування по вертикалі */
+  gap: 10px; /* Відстань між елементами */
+  position: relative; /* Для бейджа (badge) */
+}
+
+.middle .icon .divider {
+  width: 1px; /* Ширина лінії */
+  height: 24px; /* Висота лінії */
+  background-color: var(--gray3); /* Колір лінії */
+  font-weight: 200;
+}
+
+.middle .icon img {
+  width: 32px; /* Розмір іконок */
+  height: 32px;
+  cursor: pointer; /* Зміна курсора для інтерактивності */
+}
+
+.middle .icon .cart {
+  position: relative; /* Відносне позиціонування для бейджа */
+}
+
+.middle .icon .cart .badge {
+  position: absolute; /* Абсолютне позиціонування */
+  top: -5px; /* Відступ від верху іконки */
+  right: -10px; /* Відступ від правого краю іконки */
+  background-color: var(--primary); /* Зелений фон */
+  color: var(--white); /* Білий текст */
+  font-size: var(--font-size-body-tiny); /* Розмір шрифту */
+  font-weight: var(--font-weight-500); /* Напівжирний текст */
+  padding: 2px 6px; /* Відступи всередині бейджа */
+  border-radius: 50%; /* Робимо бейдж круглим */
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* Відстань між іконками */
+  line-height: 1; /* Щільне відображення тексту */
+  min-width: 18px; /* Мінімальна ширина бейджа */
+  height: 18px; /* Висота бейджа */
 }
+/*Нижння*/
 
-.middle .icon img:hover {
-  opacity: 0.7; /* Ефект при наведенні на іконки */
-}
-
-/* Загальний контейнер */
+/* Mobile-first стилі */
 .bottom-navigation {
   display: flex;
-  justify-content: space-between; /* Вирівнювання: меню зліва, телефон справа */
-  align-items: center;
-  height: 60px;
-  padding: 0 20px; /* Горизонтальні відступи */
-  background-color: var(--gray9);
-  position: relative;
-}
-
-/* Посилання навігації */
-.bottom-navigation .nav-links {
-  display: flex;
-  gap: 32px; /* Відстань між кнопками */
-}
-
-/* Посилання */
-.bottom-navigation .nav-links .nav-link a {
-  text-decoration: none;
-  color: var(--gray5);
-  font-family: var(--font-family);
-  font-size: 14px;
-  font-weight: var(--font-weight-500);
-  line-height: 21px;
-  transition: color 0.3s;
-}
-
-/* Ефект наведення */
-.bottom-navigation .nav-links .nav-link a:hover {
-  color: var(--white);
-}
-
-/* Телефон */
-.bottom-navigation .phone {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 100%; /* Займає всю висоту навігаційної панелі */
-  flex-shrink: 0; /* Запобігає зменшенню розміру блоку телефону */
-  margin-left: auto; /* Відсуває телефон максимально вправо */
-}
-
-.bottom-navigation .phone a {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Відстань між іконкою і текстом */
-  text-decoration: none;
-  color: var(--white); /* Використовує змінну для білого кольору */
-  font-family: 'Poppins', sans-serif; /* Встановлює шрифт Poppins */
-  font-size: 14px; /* Розмір тексту */
-  font-weight: 400; /* Вага тексту згідно стандарту Body Small */
-  line-height: 21px; /* Висота рядка */
-  white-space: nowrap; /* Запобігає переносу тексту телефону */
-}
-
-.bottom-navigation .phone img {
-  height: 28px; /* Розмір іконки збільшено для гармонійного вигляду */
-  width: 28px;
-}
-
-
-
-/* Видалення синьої рамки */
-.bottom-navigation a:focus {
-  outline: none;
-}
-
-/* Бургер-меню */
-.burger-menu {
-  display: none; /* Сховано на декстопі */
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  background: none;
-  border: none;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--white);
+}
+
+.bottom-navigation .phone {
+  font-family: var(--font-family);
+  font-size: var(--line-height-body-small);
+  font-weight: var(--font-weight-500);
+  line-height: var(--line-height-body-small);
+
+}
+.phone a{
+  text-decoration: none;
+  color: var(--gray10);
+}
+.phone img{
+  width: 28px;
+  height: 28px;
+}
+.nav-links {
+  display: none; /* Сховати звичайне меню на мобільних */
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
+  border: none;
+  background: none;
 }
 
 .burger-menu span {
   display: block;
-  height: 3px;
-  background-color: var(--primary);
+  width: 30px;
+  height: 4px;
+  background-color: var(--gray9);
   border-radius: 2px;
-  transition: all 0.3s;
 }
 
-/* Адаптивний вигляд */
-@media (max-width: 768px) {
-  /* Навігація */
-  .bottom-navigation .nav-links {
-    display: none; /* Сховано меню на мобільних */
+.nav-menu {
+  display: none; /* Сховане меню за замовчуванням */
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--gray9);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-500);
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--gray3);
+}
+
+.nav-menu a:last-child {
+  border-bottom: none;
+}
+
+/* Анімація появи меню */
+.nav-menu.active {
+  display: flex;
+}
+
+/* Адаптивність для більших екранів */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none; /* Ховати бургер-меню на великих екранах */
   }
 
-  .burger-menu {
-    display: flex; /* Показано бургер-меню на мобільних */
+  .nav-links {
+    display: flex; /* Показувати звичайне меню */
+    gap: 20px;
   }
 
-  /* Відкрите меню */
-  .bottom-navigation.open .nav-links {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px; /* Під навігаційною панеллю */
-    left: 0;
-    right: 0;
-    background-color: var(--white);
+  .nav-links .nav-link a {
+    text-decoration: none;
+    color: var(--gray9);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-500);
     padding: 10px;
-    gap: 10px;
+    text-align: center;
   }
 }
+
+
+.hero {
+  padding: 20px;
+  background-color: var(--green_gray1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  text-align: left;
+}
+
+.hero .info {
+  text-align: center;
+}
+
+.hero .headingInfo p{
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: var(--font-weight-500);
+  line-height: 14px;
+  letter-spacing: 2%;
+  align-content: center;
+  color: var(--primary);
+}
+
+.hero .headingInfo h1 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-display-01);
+  font-weight: var(--font-weight-600);
+  line-height: var(--line-height-display);
+  color: #1a1a1a;
+}
+
+.hero .descritionInfo h5{
+  font-family: var(--font-family);
+  font-size: var(--font-size-heading-05);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-heught-heading05);
+  color: var(--gray10);
+}
+
+.hero .descritionInfo span{
+  font-family: var(--font-family);
+  font-size: var(--font-size-heading-05);
+  font-weight: var(--font-weight-600);
+  line-height: var(--line-heught-heading05);
+  color: var(--waringing);
+}
+
+.hero .descritionInfo p{
+  font-family: var(--font-family);
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-400);
+  line-height: var(--line-height-body-small);
+  color: var(--gray6);
+}
+.hero .shopNow {
+  margin-bottom: 20px;
+  padding: 12px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  font-size: var(--font-size-body-large);
+  border-radius: 25px;
+}
+
+.hero .shopNow:hover {
+  background-color: var(--hard_primary);
+}
+.hero img {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.dot-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  color: black;
+  height: 20px;
+  width: 20px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ddd; /* Неактивний колір */
+  border-radius: 50%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+  background-color: #4caf50; /* Активний колір */
+  transform: scale(1.2); /* Трохи збільшується активний елемент */
+}
+
+  .featured {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px; /* Невеликий наклад на hero */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 200px;
+    text-align: left;
+  }
+  
+  .feature img {
+    width: 40px;
+    height: 40px;
+  }
+  .feature p{
+    font-family: var(--font-family);
+    font-size: var(--font-size-body-small);
+    font-weight: var(--font-weight-400);
+    line-height: var(--line-height-body-small);
+    color: var(--gray5);
+  }
+  .feature h3{
+    font-family: var(--font-family);
+    font-size: var(--font-size-body-medium);
+    font-weight: var(--font-weight-600);
+    line-height: 19.2px;
+  }
+  
+  .featuredProduct .heading {
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання */
+    align-items: center; /* Центрування по горизонталі */
+    text-align: center; /* Вирівнювання тексту всередині */
+    margin-top: 80px;
+  }
+  .featuredProduct .heading h2{
+    font-family: var(--font-family);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    color: #1a1a1a;
+    margin: 0; /* Усуваємо зайві відступи */
+  }
+
+  .heading .line-tracker {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .line {
+    width: 20px;
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .line.active {
+    background-color: #4caf50; /* Основний колір активного елемента */
+  }
+
+/* Центрування батьківського блоку та розміщення 5 продуктів */
+.products {
+  display: grid; /* Використовуємо CSS Grid */
+  grid-template-columns: repeat(5, 1fr); /* 5 рівних колонок */
+  gap: 20px; /* Відступи між продуктами */
+  max-width: 1200px; /* Максимальна ширина контейнера */
+  margin: 0 auto; /* Центрування контейнера */
+  padding: 20px;
+  justify-content: center; /* Центрування всього блоку */
+  align-items: start; /* Вирівнювання продуктів по верхньому краю */
+}
+
+/* Оформлення кожного продукту */
+.products {
+  display: flex;
+  flex-wrap: wrap; /* Щоб всі продукти переходили на новий рядок */
+  gap: 20px; /* Відстань між продуктами */
+  justify-content: center; /* Центруємо всі елементи в контейнері */
+}
+
+.Product {
+  background-color: #00ffff; /* Яскравий блакитний фон */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легка тінь для краси */
+  text-align: left; /* Вирівнюємо весь текст ліворуч */
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Елементи вертикально */
+  align-items: flex-start; /* Вирівнюємо елементи до лівого краю */
+}
+
+.Product img:first-of-type {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px; /* Трохи округлі краї картинки */
+}
+
+.Product h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+}
+
+.Product p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007b00;
+  margin-bottom: 10px;
+}
+
+.Product .rating-and-button {
+  display: flex;
+  justify-content: space-between; /* Відокремлюємо рейтинг і кнопку */
+  align-items: center;
+  width: 100%; /* Розтягуємо блок по ширині */
+}
+
+.Product .rating-and-button img {
+  height: 24px;
+}
+
+.Product button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 48px; /* Фіксований розмір кнопки */
+  height: 48px;
+  display: flex; /* Центруємо іконку */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fff; /* Фон кнопки */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Легка тінь для кнопки */
+}
+
+.Product button img {
+  width: 100%; /* Картинка тепер охоплює всю кнопку */
+  height: 100%;
+  object-fit: contain; /* Вписуємо картинку без обрізання */
+}
+
+
+
+/* Медійні запити для планшетів і десктопів */
+@media (min-width: 768px) {
+  .middle {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2;
+  }
+
+  .middle .search {
+    width: auto;
+  }
+
+  .bottom-navigation {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottom-navigation .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
+  }
+
+  .hero .info {
+    text-align: left;
+  }
+
+  .hero .headingInfo h1 {
+    font-size: var(--font-size-display-01);
+  }
+}  
